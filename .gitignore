@@ -1,0 +1,5 @@
+node_modules/
+tsconfig.tsbuildinfo
+bin/**
+package-lock.json
+schema-example1.json

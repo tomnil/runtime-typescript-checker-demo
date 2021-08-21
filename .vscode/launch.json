@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Example 1",
+            "type": "node",
+            "request": "launch",
+            "smartStep": false,
+            "sourceMaps": true,
+            "args": [
+                "./example1/index.ts",
+                "--build",
+                "--test"
+            ],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "cwd": "${workspaceRoot}/src",
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+                "TS_NODE_FILES": "true" // Enable automatic load of declaration files
+            },
+            "skipFiles": [
+                "<node_internals>/**",
+                "${workspaceRoot}/node_modules/**"
+            ],
+            "outputCapture": "std"
+        }
+    ]
+}
